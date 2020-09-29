@@ -1,0 +1,29 @@
+---
+x-tcpservice: &tcpservice
+  type: tcp
+  check_interval: 60
+  timeout: 30
+  allow_notifications: true
+  notify_after: 0
+  notify_all_changes: true
+  public: true
+  redirect: true
+
+x-httpservice: &httpservice
+  type: http
+  method: GET
+  check_interval: 45
+  timeout: 10
+  expected_status: 200
+  allow_notifications: true
+  notify_after: 2
+  notify_all_changes: true
+  public: true
+  redirect: true
+
+services:
+  - name: Pocket fire_tv_events
+    domain: https://prod.data-monitor-api.prod.dataops.mozgcp.net/api/v1/tableHealth/pocket/fire_tv_events
+    <<: *httpservice
+
+...

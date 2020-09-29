@@ -11,6 +11,8 @@ COPY --from=base /usr/local/share/ca-certificates /usr/local/share/
 WORKDIR /app
 VOLUME /app
 
+COPY services.yml /app
+
 ENV IS_DOCKER=true
 ENV SASS=/usr/local/bin/sassc
 ENV STATPING_DIR=/app
