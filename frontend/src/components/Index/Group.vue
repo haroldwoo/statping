@@ -20,14 +20,14 @@
 </template>
 
 <script>
-    <!-- const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ './GroupServiceFailures'); -->
+    // const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ './GroupServiceFailures');
     const IncidentsBlock = () => import(/* webpackChunkName: "index" */ './IncidentsBlock');
 
 export default {
   name: 'Group',
   components: {
-      IncidentsBlock,
-      <!-- GroupServiceFailures -->
+      IncidentsBlock
+      // GroupServiceFailures
   },
   props: {
     group: {

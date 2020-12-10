@@ -44,16 +44,16 @@ import Api from "@/API";
 const Group = () => import(/* webpackChunkName: "index" */ '@/components/Index/Group')
 const Header = () => import(/* webpackChunkName: "index" */ '@/components/Index/Header')
 const MessageBlock = () => import(/* webpackChunkName: "index" */ '@/components/Index/MessageBlock')
-<!-- const ServiceBlock = () => import(/* webpackChunkName: "index" */ '@/components/Service/ServiceBlock') -->
-<!-- const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ '@/components/Index/GroupServiceFailures') -->
+//const ServiceBlock = () => import(/* webpackChunkName: "index" */ '@/components/Service/ServiceBlock')
+//const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ '@/components/Index/GroupServiceFailures')
 const IncidentsBlock = () => import(/* webpackChunkName: "index" */ '@/components/Index/IncidentsBlock')
 
 export default {
     name: 'Index',
     components: {
       IncidentsBlock,
-      <!-- GroupServiceFailures, -->
-      <!-- ServiceBlock, -->
+      //GroupServiceFailures,
+      //ServiceBlock,
       MessageBlock,
       Group,
       Header
