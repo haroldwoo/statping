@@ -9,7 +9,7 @@
                     {{service.online ? $t('online') : $t('offline')}}
                 </span>
 
-                <GroupServiceFailures :service="service"/>
+                <!-- <GroupServiceFailures :service="service"/> -->
 
                 <IncidentsBlock :service="service"/>
 
@@ -20,14 +20,14 @@
 </template>
 
 <script>
-    const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ './GroupServiceFailures');
+    <!-- const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ './GroupServiceFailures'); -->
     const IncidentsBlock = () => import(/* webpackChunkName: "index" */ './IncidentsBlock');
 
 export default {
   name: 'Group',
   components: {
       IncidentsBlock,
-      GroupServiceFailures
+      <!-- GroupServiceFailures -->
   },
   props: {
     group: {

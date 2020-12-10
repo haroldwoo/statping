@@ -17,7 +17,7 @@
                 <div class="list-group-item list-group-item-action">
                     <router-link class="no-decoration font-3" :to="serviceLink(service)">{{service.name}}</router-link>
                     <span class="badge float-right" :class="{'bg-success': service.online, 'bg-danger': !service.online }">{{service.online ? "ONLINE" : "OFFLINE"}}</span>
-                    <GroupServiceFailures :service="service"/>
+                    <!-- <GroupServiceFailures :service="service"/> -->
                     <IncidentsBlock :service="service"/>
                 </div>
             </div>
@@ -27,12 +27,14 @@
         <div class="col-12 full-col-12">
             <MessageBlock v-for="message in messages" v-bind:key="message.id" :message="message" />
         </div>
-
+        
+        <!--
         <div class="col-12 full-col-12">
             <div v-for="service in services" :ref="service.id" v-bind:key="service.id">
                 <ServiceBlock :service="service" />
             </div>
         </div>
+        -->
 
     </div>
 </template>
@@ -42,16 +44,16 @@ import Api from "@/API";
 const Group = () => import(/* webpackChunkName: "index" */ '@/components/Index/Group')
 const Header = () => import(/* webpackChunkName: "index" */ '@/components/Index/Header')
 const MessageBlock = () => import(/* webpackChunkName: "index" */ '@/components/Index/MessageBlock')
-const ServiceBlock = () => import(/* webpackChunkName: "index" */ '@/components/Service/ServiceBlock')
-const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ '@/components/Index/GroupServiceFailures')
+<!-- const ServiceBlock = () => import(/* webpackChunkName: "index" */ '@/components/Service/ServiceBlock') -->
+<!-- const GroupServiceFailures = () => import(/* webpackChunkName: "index" */ '@/components/Index/GroupServiceFailures') -->
 const IncidentsBlock = () => import(/* webpackChunkName: "index" */ '@/components/Index/IncidentsBlock')
 
 export default {
     name: 'Index',
     components: {
       IncidentsBlock,
-      GroupServiceFailures,
-      ServiceBlock,
+      <!-- GroupServiceFailures, -->
+      <!-- ServiceBlock, -->
       MessageBlock,
       Group,
       Header
