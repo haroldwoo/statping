@@ -565,6 +565,7 @@ input.inputTags-field:focus {
 
   .list-group-item H5 {
     font-size: 0.9rem;
+    height: 50px;
   }
 
   .container {
@@ -623,20 +624,24 @@ input.inputTags-field:focus {
   .list-group-item {
     border-top: 1px solid #e4e4e4;
     border: 0px;
+    height: 50px;
   }
 
   .list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    height: 50px;    
   }
 
   .list-group-item:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    height: 50px;    
   }
 
   .list-group-item P {
     font-size: 0.7rem;
+    height: 50px;
   }
 
   .service-chart-container {
